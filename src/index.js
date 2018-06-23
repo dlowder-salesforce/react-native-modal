@@ -32,8 +32,8 @@ const isObject = obj => {
   return obj !== null && typeof obj === "object";
 };
 
-export class ReactNativeModal extends Component {
-  static propTypes = {
+export default class ReactNativeModal extends Component {
+  propTypes = {
     animationIn: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     animationInTiming: PropTypes.number,
     animationOut: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
@@ -60,7 +60,7 @@ export class ReactNativeModal extends Component {
     scrollOffsetMax: PropTypes.number
   };
 
-  static defaultProps = {
+  defaultProps = {
     animationIn: "slideInUp",
     animationInTiming: 300,
     animationOut: "slideOutDown",
@@ -476,5 +476,3 @@ export class ReactNativeModal extends Component {
     );
   }
 }
-
-export default ReactNativeModal;
